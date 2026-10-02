@@ -252,12 +252,6 @@ a {
   border-radius: 999px;
 }
 
-.tags .tag-sub {
-  color: var(--color-text-sub);
-  background: #fff;
-  border-color: var(--color-border);
-}
-
 /* ---------- 作品 ---------- */
 .works-grid {
   display: grid;
