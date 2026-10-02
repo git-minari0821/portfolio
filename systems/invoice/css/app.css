@@ -1,0 +1,111 @@
+/* 見積書・請求書：アクセントカラー（パープル）、明細入力、A4帳票と印刷用スタイル */
+:root {
+  --accent: #5b4a9e;
+  --accent-dark: #47397f;
+  --accent-soft: #efecf8;
+}
+
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 12px; color: var(--text-sub); }
+.paid-date { font-size: 12px; color: var(--success); }
+.dash-alert { margin-top: 16px; }
+.card-danger { border-top: 3px solid var(--danger); }
+.table-wrap + .card, .dash-alert + .grid-2 { margin-top: 16px; }
+.grid-2 + .card { margin-top: 16px; }
+table.data td .btn-sm { margin-right: 4px; }
+
+/* ---------- 明細入力 ---------- */
+.items-table { min-width: 820px; }
+.items-table td { padding: 6px 6px; vertical-align: top; }
+.items-table th { padding: 8px 6px; }
+.items-table .field-error { font-size: 11px; white-space: normal; }
+.items-table .input { min-height: 36px; padding: 4px 8px; }
+.w-qty { width: 72px; }
+.w-unit { width: 64px; }
+.w-price { width: 120px; }
+.w-rate { width: 110px; }
+.col-order { width: 64px; }
+.col-ops { width: 40px; }
+.order-btns { display: flex; }
+.order-btns .icon-btn { width: 26px; height: 36px; font-size: 15px; }
+.order-btns .icon-btn:disabled { opacity: 0.25; cursor: default; }
+.line-amount { padding-top: 14px !important; font-variant-numeric: tabular-nums; }
+.add-line { margin-top: 10px; }
+.totals { display: flex; justify-content: flex-end; margin-top: 16px; }
+.totals-list { display: grid; grid-template-columns: auto auto; gap: 4px 24px; min-width: 280px; padding: 14px 18px; font-size: 13px; background: var(--accent-soft); border-radius: 8px; }
+.totals-list dd { text-align: right; font-variant-numeric: tabular-nums; }
+.totals-list .grand { padding-top: 6px; font-size: 16px; font-weight: 700; border-top: 1px solid #d5cfee; }
+.sticky-actions { position: sticky; bottom: 0; z-index: 5; margin: 16px -16px 0; padding: 12px 16px; background: rgba(244, 246, 248, 0.96); border-top: 1px solid var(--border); }
+.doc-form .card + .card { margin-top: 16px; }
+
+/* ---------- 帳票プレビュー ---------- */
+.preview-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px; }
+.preview-toolbar .back-link { margin: 0; }
+.preview-hint { flex-basis: 100%; font-size: 12px; color: var(--text-sub); }
+.preview-toolbar .alert { flex-basis: 100%; }
+.paper-wrap { overflow-x: auto; padding-bottom: 8px; }
+.paper {
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 16mm 15mm 14mm;
+  font-family: "Noto Sans JP", "Hiragino Mincho ProN", serif;
+  font-size: 10pt;
+  line-height: 1.6;
+  color: #111;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(16, 24, 40, 0.12);
+}
+.paper-head { display: flex; align-items: flex-start; justify-content: space-between; }
+.paper-title { font-size: 22pt; font-weight: 700; letter-spacing: 0.4em; }
+.paper-meta { display: grid; grid-template-columns: auto auto; gap: 0 10px; font-size: 9pt; }
+.paper-meta dt { color: #555; }
+.paper-meta dd { text-align: right; }
+.paper-parties { display: flex; justify-content: space-between; gap: 10mm; margin-top: 8mm; }
+.paper-to { flex: 1; }
+.to-name { display: inline-block; min-width: 80mm; padding-bottom: 2px; font-size: 14pt; font-weight: 700; border-bottom: 1px solid #111; }
+.to-honorific { margin-left: 0.6em; font-size: 12pt; }
+.to-person { margin-top: 2px; }
+.to-addr { margin-top: 2px; font-size: 9pt; color: #444; }
+.to-lead { margin-top: 5mm; font-size: 9pt; }
+.paper-subject { margin-top: 2mm; font-weight: 700; }
+.paper-amount { display: flex; align-items: baseline; gap: 4mm; margin-top: 3mm; padding: 3mm 4mm; background: #f3f1f9; border-bottom: 2px solid #111; }
+.paper-amount span { font-size: 10pt; }
+.paper-amount strong { font-size: 18pt; letter-spacing: 0.02em; }
+.paper-amount small { font-size: 9pt; }
+.paper-limit { margin-top: 2mm; font-size: 9.5pt; }
+.paper-from { position: relative; width: 62mm; font-size: 8.5pt; line-height: 1.6; }
+.paper-from p + p { margin-top: 1mm; }
+.from-name { font-size: 11pt; font-weight: 700; }
+.from-reg { font-weight: 700; }
+.stamp { position: absolute; top: 0; right: 0; display: grid; place-items: center; width: 14mm; height: 14mm; font-size: 9pt; color: #c43c3c; border: 1px solid #e3a1a1; border-radius: 50%; opacity: 0.6; }
+.paper-items { width: 100%; margin-top: 7mm; font-size: 9.5pt; border-collapse: collapse; }
+.paper-items th { padding: 1.6mm 2mm; font-weight: 700; background: #ebe8f5; border: 1px solid #999; }
+.paper-items td { padding: 1.6mm 2mm; border: 1px solid #bbb; }
+.paper-items .c-num { width: 26mm; text-align: right; font-variant-numeric: tabular-nums; }
+.paper-items .c-unit { width: 14mm; text-align: center; }
+.paper-items tr.blank td { height: 7mm; }
+.reduced { font-weight: 700; }
+.paper-bottom { display: flex; justify-content: space-between; gap: 8mm; margin-top: 4mm; }
+.paper-notes { flex: 1; font-size: 8.5pt; }
+.reduced-note { margin-bottom: 2mm; }
+.paper-box { margin-bottom: 3mm; padding: 2mm 3mm; border: 1px solid #bbb; }
+.box-title { font-weight: 700; }
+.box-sub { margin-top: 1mm; font-size: 8pt; color: #555; }
+.paper-sum { width: 76mm; font-size: 9.5pt; border-collapse: collapse; }
+.paper-sum th, .paper-sum td { padding: 1.2mm 2mm; border: 1px solid #bbb; }
+.paper-sum th { font-weight: 400; text-align: left; background: #f6f5fa; }
+.paper-sum td { text-align: right; font-variant-numeric: tabular-nums; }
+.paper-sum .sum-total th, .paper-sum .sum-total td { font-size: 11pt; font-weight: 700; background: #ebe8f5; }
+.paper-foot { position: absolute; right: 15mm; bottom: 8mm; left: 15mm; font-size: 7pt; text-align: center; color: #888; }
+
+/* ---------- 印刷（メニューなどを隠し、帳票だけを A4 で出す） ---------- */
+@page { size: A4; margin: 0; }
+@media print {
+  body { background: #fff; }
+  .demo-banner, .sidebar, .sidebar-backdrop, .topbar, .no-print, .toast-box { display: none !important; }
+  .shell { display: block; min-height: 0; }
+  .view { padding: 0 !important; }
+  .paper-wrap { overflow: visible; padding: 0; }
+  .paper { width: 210mm; min-height: 296mm; margin: 0; box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

@@ -1,0 +1,61 @@
+/* 在庫・発注管理：アクセントカラー（ブルー）と専用スタイル */
+:root {
+  --accent: #2457c5;
+  --accent-dark: #1c449b;
+  --accent-soft: #e8eefb;
+}
+
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 12px; color: var(--text-sub); }
+.qty-plus { color: var(--info); font-weight: 700; }
+.qty-minus { color: var(--danger); font-weight: 700; }
+.mt { margin-top: 12px; }
+.data-compact { min-width: 0 !important; }
+.data tfoot th { font-size: 14px; color: var(--text); background: #f8fafb; border-top: 1px solid var(--border); }
+
+/* 警告リスト */
+.alert-row .alert-icon { display: grid; place-items: center; width: 22px; height: 22px; flex: none; font-size: 13px; font-weight: 700; color: #fff; border-radius: 50%; }
+.alert-row-out .alert-icon { background: var(--danger); }
+.alert-row-low .alert-icon { background: #d39e00; }
+
+/* グラフ */
+.chart { margin-top: 12px; }
+.chart-svg { display: block; width: 100%; height: auto; }
+.ch-grid { stroke: #e7ebf0; stroke-width: 1; }
+.ch-label { font-size: 11px; fill: var(--muted); }
+.ch-line { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.ch-dot { fill: #fff; stroke: var(--accent); stroke-width: 2; }
+.ch-rp { stroke: var(--danger); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.ch-rp-label { font-size: 11px; fill: var(--danger); }
+.chart-note { margin-top: 6px; font-size: 13px; color: var(--text-sub); }
+
+/* 入出庫フォーム */
+.seg { display: inline-flex; overflow: hidden; border: 1px solid var(--border); border-radius: 6px; }
+.seg-wide { display: flex; }
+.seg-wide label { position: relative; flex: 1; margin: 0; }
+.seg-wide input { position: absolute; opacity: 0; pointer-events: none; }
+.seg-wide span { display: block; padding: 8px 4px; font-weight: 500; text-align: center; background: var(--surface); cursor: pointer; }
+.seg-wide label + label span { border-left: 1px solid var(--border); }
+.seg-wide input:checked + span { color: #fff; background: var(--accent); }
+.seg-wide input:focus-visible + span { outline: 2px solid var(--accent-dark); outline-offset: -3px; }
+fieldset.field { margin: 0; padding: 0; border: 0; }
+.move-preview { min-height: 1.7em; padding: 8px 12px; font-size: 13px; background: var(--bg); border-radius: 6px; }
+.move-preview:empty { display: none; }
+.stock-now { padding: 7px 0; font-size: 16px; font-weight: 700; }
+
+/* 発注書の作成 */
+.order-lines { min-width: 760px; }
+.order-lines td { vertical-align: top; }
+.order-lines input[type="checkbox"] { width: 18px; height: 18px; margin-top: 8px; accent-color: var(--accent); }
+.qty-field { align-items: flex-end; }
+.qty-input { width: 88px !important; text-align: right; }
+.qty-field .field-error { white-space: nowrap; }
+.order-add { margin-top: 16px; }
+.inline { display: flex; gap: 8px; }
+.inline .input { flex: 1; min-width: 0; }
+.order-summary { margin-top: 16px; padding: 12px 14px; font-size: 14px; background: var(--accent-soft); border-radius: 6px; }
+
+/* CSV取り込み */
+.import-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.file-btn { cursor: pointer; }
+.file-btn:focus-within { outline: 2px solid var(--accent-dark); outline-offset: 2px; }
+.file-name { margin-top: 8px; font-size: 13px; }

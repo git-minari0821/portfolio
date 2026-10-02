@@ -15,6 +15,11 @@ portfolio/
 │   ├── seitai/       整体院LP
 │   ├── recruit/      採用LP
 │   └── school/       オンライン講座LP
+├── systems/          業務システムのデモ（データはブラウザの localStorage に保存）
+│   ├── common/       3本で共通の部品（保存・一覧表・モーダル・画面の枠組み）
+│   ├── reserve/      予約・顧客管理
+│   ├── inventory/    在庫・発注管理
+│   └── invoice/      見積書・請求書作成
 └── README.md
 ```
 

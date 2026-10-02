@@ -361,6 +361,29 @@ a {
   color: var(--color-text-sub);
 }
 
+.feature-list {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
 .lp-fiction {
   font-size: 12px;
   color: var(--color-text-sub);
