@@ -11,6 +11,10 @@ portfolio/
 ├── css/style.css     スタイル
 ├── js/main.js        画像が未配置のときにダミー枠を出すだけの処理
 ├── images/           スクショ・OGP画像の置き場（images/README.md 参照）
+├── samples/          LP制作サンプル（架空の店舗・企業）
+│   ├── seitai/       整体院LP
+│   ├── recruit/      採用LP
+│   └── school/       オンライン講座LP
 └── README.md
 ```
 

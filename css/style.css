@@ -70,6 +70,10 @@ a {
   display: inline;
 }
 
+.sp-hide {
+  display: none;
+}
+
 /* ---------- ヘッダー ---------- */
 .site-header {
   position: sticky;
@@ -350,6 +354,18 @@ a {
   margin-top: auto;
 }
 
+/* ---------- LP制作サンプル ---------- */
+.section-lead {
+  margin: -16px 0 28px;
+  font-size: 14px;
+  color: var(--color-text-sub);
+}
+
+.lp-fiction {
+  font-size: 12px;
+  color: var(--color-text-sub);
+}
+
 /* ---------- 経歴（タイムライン） ---------- */
 .timeline {
   position: relative;
@@ -535,6 +551,10 @@ a {
 
   .sp-only {
     display: none;
+  }
+
+  .sp-hide {
+    display: inline;
   }
 
   .nav {

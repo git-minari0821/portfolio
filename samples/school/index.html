@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>はじめてのExcel時短講座｜社会人向けオンライン講座【制作サンプル】</title>
+  <meta name="description" content="毎日の事務作業を、もっと短く。関数・ピボットテーブル・マクロの基本を、オンラインで基礎から学べる社会人向けExcel講座。無料説明会受付中（制作実績用の架空のサンプルです）。">
+
+  <!-- OGP ※公開後、URL を公開URLに差し替える -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="はじめてのExcel時短講座｜社会人向けオンライン講座【制作サンプル】">
+  <meta property="og:description" content="毎日の事務作業を、もっと短く。無料説明会受付中（制作実績用の架空のサンプルです）。">
+  <meta property="og:url" content="https://example.vercel.app/samples/school/">
+  <meta property="og:image" content="https://example.vercel.app/samples/school/images/ogp.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230f1f3d'/%3E%3Cpath d='M16 18h32v28H16Z' fill='none' stroke='%23ffc93c' stroke-width='4'/%3E%3Cpath d='M16 28h32M28 18v28' stroke='%23ffc93c' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <p class="sample-notice">※このページは制作実績用のサンプルです。実在の店舗・企業とは関係ありません。</p>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M3 12h26M12 5v22"/></svg>
+        はじめてのExcel時短講座
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="global-nav" class="nav" aria-label="メインメニュー">
+        <a href="#skills">身につくこと</a>
+        <a href="#curriculum">カリキュラム</a>
+        <a href="#teacher">講師</a>
+        <a href="#plan">料金</a>
+        <a href="#faq">FAQ</a>
+        <a href="#apply" class="nav-cta">無料説明会に申し込む</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== ファーストビュー ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag"><span>ONLINE</span>社会人向け・全8回</p>
+          <h1 class="hero-title">その集計、<br><em>もっと短く</em>できる。</h1>
+          <p class="hero-lead">毎日のコピー＆ペースト、手作業の集計、くり返しの資料づくり。<br class="pc-only">Excelの「時短の型」を、基礎からオンラインで学べる講座です。</p>
+          <ul class="hero-points">
+            <li>Excelの基本操作ができればOK</li>
+            <li>平日夜・週末に受講できる</li>
+            <li>録画で何度でも復習できる</li>
+          </ul>
+          <a href="#apply" class="btn btn-yellow btn-lg">無料説明会に申し込む</a>
+          <p class="hero-note">オンライン開催・60分・参加無料</p>
+        </div>
+
+        <!-- 図解（Excelの画面をイメージしたイラスト・インラインSVG） -->
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 400 300">
+            <rect x="10" y="10" width="380" height="280" rx="4" class="v-frame"/>
+            <rect x="10" y="10" width="380" height="34" class="v-bar"/>
+            <circle cx="30" cy="27" r="5" class="v-dot"/><circle cx="46" cy="27" r="5" class="v-dot"/><circle cx="62" cy="27" r="5" class="v-dot"/>
+            <rect x="30" y="62" width="340" height="24" class="v-formula"/>
+            <text x="40" y="79" class="v-code">=SUMIFS(売上, 担当, "A")</text>
+            <g class="v-grid">
+              <path d="M30 104h340M30 134h340M30 164h340M30 194h340M30 224h340M30 254h340"/>
+              <path d="M30 104v150M110 104v150M200 104v150M290 104v150M370 104v150"/>
+            </g>
+            <rect x="290" y="134" width="80" height="30" class="v-hl"/>
+            <rect x="130" y="200" width="22" height="50" class="v-chart"/>
+            <rect x="160" y="180" width="22" height="70" class="v-chart"/>
+            <rect x="220" y="170" width="22" height="80" class="v-chart v-chart-accent"/>
+            <rect x="250" y="190" width="22" height="60" class="v-chart"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== こんな人におすすめ ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="en">FOR YOU</span>こんな人におすすめです</h2>
+        <ul class="for-list">
+          <li class="reveal"><span class="for-num">01</span>毎月の集計作業に、半日以上かかっている</li>
+          <li class="reveal"><span class="for-num">02</span>関数は SUM と AVERAGE くらいしか使っていない</li>
+          <li class="reveal"><span class="for-num">03</span>同じ作業を、毎回手作業でくり返している</li>
+          <li class="reveal"><span class="for-num">04</span>独学で始めたものの、何から学べばいいか分からない</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 身につくこと ===== -->
+    <section id="skills" class="section section-navy">
+      <div class="container">
+        <h2 class="section-title section-title-light reveal"><span class="en">SKILLS</span>講座で身につくこと</h2>
+        <div class="skill-list">
+          <article class="skill reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32M8 24h20M8 36h26"/><path d="M34 30l6 6-6 6"/></svg>
+            <h3>よく使う関数の組み合わせ</h3>
+            <p>IF・VLOOKUP / XLOOKUP・SUMIFS など、事務作業でよく使う関数を、実務の例で学びます。</p>
+          </article>
+          <article class="skill reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32"/><path d="M8 18h32M18 8v32"/></svg>
+            <h3>ピボットテーブルでの集計</h3>
+            <p>数千行のデータも、ドラッグ操作で集計・分析できるようになります。</p>
+          </article>
+          <article class="skill reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><path d="M24 14v10l7 5"/></svg>
+            <h3>くり返し作業の自動化</h3>
+            <p>マクロの記録とかんたんな修正で、定型作業をボタン1つで動かす方法を学びます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== カリキュラム（タブ） ===== -->
+    <section id="curriculum" class="section">
+      <div class="container container-narrow">
+        <h2 class="section-title reveal"><span class="en">CURRICULUM</span>カリキュラム</h2>
+        <div class="tabs reveal">
+          <div class="tab-list" role="tablist" aria-label="カリキュラムの段階">
+            <button id="tab-basic" class="tab" type="button" role="tab" aria-selected="true" aria-controls="panel-basic">基礎編<small>第1〜3回</small></button>
+            <button id="tab-practice" class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-practice" tabindex="-1">実践編<small>第4〜6回</small></button>
+            <button id="tab-auto" class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-auto" tabindex="-1">自動化編<small>第7〜8回</small></button>
+          </div>
+
+          <div id="panel-basic" class="tab-panel" role="tabpanel" aria-labelledby="tab-basic" tabindex="0">
+            <ol class="lessons">
+              <li><span>第1回</span>作業が速くなる操作とショートカット</li>
+              <li><span>第2回</span>表の作り方と、集計しやすいデータの形</li>
+              <li><span>第3回</span>IF・COUNTIF・SUMIF で条件付きの集計</li>
+            </ol>
+          </div>
+          <div id="panel-practice" class="tab-panel" role="tabpanel" aria-labelledby="tab-practice" tabindex="0" hidden>
+            <ol class="lessons">
+              <li><span>第4回</span>VLOOKUP / XLOOKUP で別の表からデータを引く</li>
+              <li><span>第5回</span>ピボットテーブルで月次レポートを作る</li>
+              <li><span>第6回</span>グラフと条件付き書式で「伝わる資料」にする</li>
+            </ol>
+          </div>
+          <div id="panel-auto" class="tab-panel" role="tabpanel" aria-labelledby="tab-auto" tabindex="0" hidden>
+            <ol class="lessons">
+              <li><span>第7回</span>マクロの記録で定型作業を自動化する</li>
+              <li><span>第8回</span>総まとめ：自分の業務を時短する計画を立てる</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 講師紹介 ===== -->
+    <section id="teacher" class="section section-gray">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="en">TEACHER</span>講師紹介</h2>
+        <p class="fiction-note reveal">※サンプル用の架空の人物です</p>
+        <div class="teacher reveal">
+          <div class="teacher-photo ph" data-label="講師の写真">
+            <img src="images/teacher.jpg" alt="講師の佐倉" width="600" height="700" loading="lazy">
+          </div>
+          <div class="teacher-body">
+            <p class="teacher-role">講師</p>
+            <p class="teacher-name">佐倉 あかり<span>Akari Sakura</span></p>
+            <p>メーカーの経理・事務として10年間、毎月の集計や資料づくりを担当。手作業に追われた経験から Excel の効率化を独学で身につけ、社内向けの勉強会を開くように。現在は社会人向けに、実務にそのまま使える Excel の講座を行っています。</p>
+            <p class="teacher-msg">「難しいことを覚えるより、毎日の作業を1つずつ短くしていく。その積み重ねを一緒に体験しましょう。」</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 受講者の声 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="en">VOICE</span>受講者の声</h2>
+        <p class="fiction-note reveal">※サンプル用の架空の内容です</p>
+        <div class="voice-list">
+          <figure class="voice reveal">
+            <blockquote>毎月手作業でやっていた売上の集計を、ピボットテーブルで作り直しました。作業の手順がすっきりしました。</blockquote>
+            <figcaption><span class="avatar">A</span>30代・営業事務</figcaption>
+          </figure>
+          <figure class="voice reveal">
+            <blockquote>録画を見返せるので、残業があった週も置いていかれずに続けられました。</blockquote>
+            <figcaption><span class="avatar">B</span>20代・総務</figcaption>
+          </figure>
+          <figure class="voice reveal">
+            <blockquote>関数の「組み合わせ方」が分かったのが大きかったです。チームの共有ファイルも見直しています。</blockquote>
+            <figcaption><span class="avatar">C</span>40代・経理</figcaption>
+          </figure>
+        </div>
+        <p class="note reveal">※個人の感想です。</p>
+      </div>
+    </section>
+
+    <!-- ===== 料金プラン ===== -->
+    <section id="plan" class="section section-gray">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="en">PLAN</span>料金プラン</h2>
+        <p class="fiction-note reveal">※サンプル用の架空の内容です</p>
+
+        <div class="plan-scroll reveal" tabindex="0" role="region" aria-label="料金プラン比較表（横にスクロールできます）">
+          <table class="plan-table">
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden">項目</span></th>
+                <th scope="col">ライト</th>
+                <th scope="col" class="is-featured"><span class="plan-badge">人気</span>スタンダード</th>
+                <th scope="col">プレミアム</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">料金（税込）</th><td><strong>19,800</strong>円</td><td class="is-featured"><strong>39,800</strong>円</td><td><strong>69,800</strong>円</td></tr>
+              <tr><th scope="row">講義動画（全8回）</th><td class="yes">○</td><td class="yes is-featured">○</td><td class="yes">○</td></tr>
+              <tr><th scope="row">練習用ファイル</th><td class="yes">○</td><td class="yes is-featured">○</td><td class="yes">○</td></tr>
+              <tr><th scope="row">ライブ講義への参加</th><td class="no">―</td><td class="yes is-featured">○</td><td class="yes">○</td></tr>
+              <tr><th scope="row">課題の添削</th><td class="no">―</td><td class="yes is-featured">○</td><td class="yes">○</td></tr>
+              <tr><th scope="row">質問チャット</th><td class="no">―</td><td class="is-featured">受講期間中</td><td>受講期間中＋修了後3か月</td></tr>
+              <tr><th scope="row">個別相談（30分）</th><td class="no">―</td><td class="no is-featured">―</td><td>3回</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note scroll-hint reveal">← 表は横にスクロールできます →</p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section">
+      <div class="container container-narrow">
+        <h2 class="section-title reveal"><span class="en">FAQ</span>よくある質問</h2>
+        <div class="faq">
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false">Excelのどのバージョンが必要ですか？</button></h3>
+            <div class="faq-a"><div><p>Microsoft 365 または Excel 2021 以降を推奨しています。古いバージョンでは使えない関数があるため、説明会でご確認ください。</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false">Macでも受講できますか？</button></h3>
+            <div class="faq-a"><div><p>受講できます。ショートカットなど一部の操作が異なる箇所は、資料で補足しています。</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false">ライブ講義に参加できない日はどうなりますか？</button></h3>
+            <div class="faq-a"><div><p>すべての講義を録画で配信します。受講期間中は何度でも見返せます。</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false">説明会に参加したら、講座に申し込まないといけませんか？</button></h3>
+            <div class="faq-a"><div><p>いいえ、説明会への参加だけでも大丈夫です。講座の内容をご確認のうえ、ご検討ください。</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 申し込みフォーム ===== -->
+    <section id="apply" class="section section-navy">
+      <div class="container container-narrow">
+        <h2 class="section-title section-title-light reveal"><span class="en">APPLY</span>無料説明会に申し込む</h2>
+        <p class="apply-lead reveal">講座の内容と受講の流れを、60分でご説明します。カメラ・マイクはオフのままで参加できます。</p>
+
+        <form class="form js-sample-form reveal" novalidate>
+          <p class="form-sample">※サンプルのため、入力しても送信されません</p>
+          <fieldset class="form-row">
+            <legend>参加希望日<span class="req">必須</span></legend>
+            <div class="radio-list">
+              <label class="radio"><input type="radio" name="date" value="1" required><span>〇月〇日（水）20:00〜</span></label>
+              <label class="radio"><input type="radio" name="date" value="2"><span>〇月〇日（土）10:00〜</span></label>
+              <label class="radio"><input type="radio" name="date" value="3"><span>〇月〇日（日）14:00〜</span></label>
+            </div>
+          </fieldset>
+          <div class="form-row">
+            <label for="s-name">お名前<span class="req">必須</span></label>
+            <input id="s-name" name="name" type="text" autocomplete="off" required placeholder="例）山田 花子">
+          </div>
+          <div class="form-row">
+            <label for="s-mail">メールアドレス<span class="req">必須</span></label>
+            <input id="s-mail" name="email" type="email" autocomplete="off" required placeholder="例）sample@example.com">
+          </div>
+          <div class="form-row">
+            <label for="s-level">Excelの経験</label>
+            <select id="s-level" name="level">
+              <option>基本操作ができる</option>
+              <option>SUMなどかんたんな関数を使っている</option>
+              <option>VLOOKUPなども使っている</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label class="check"><input type="checkbox" name="agree" required><span>個人情報の取り扱いに同意する</span></label>
+          </div>
+          <button type="submit" class="btn btn-yellow btn-lg btn-block">無料説明会に申し込む</button>
+          <p class="form-result" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo">はじめてのExcel時短講座</p>
+      <small>&copy; Hajimete no Excel Jitan Koza（サンプル）</small>
+    </div>
+  </footer>
+
+  <!-- スマホ用の下部固定CTA -->
+  <div class="fixed-cta">
+    <p>参加無料・オンライン60分</p>
+    <a href="#apply" class="btn btn-yellow">無料説明会に申し込む</a>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
