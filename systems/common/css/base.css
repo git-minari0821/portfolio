@@ -77,6 +77,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   border-radius: 6px;
 }
 .login-card .btn { margin-top: 8px; }
+.masked-input { -webkit-text-security: disc; text-security: disc; }
 .login-back { display: block; margin-top: 16px; font-size: 12px; text-align: center; }
 .logo-mark { width: 36px; height: 36px; flex: none; }
 

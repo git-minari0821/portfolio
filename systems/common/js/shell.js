@@ -36,8 +36,10 @@
         '    <div class="login-brand">' + cfg.logo + "<div><p class=\"login-name\">" + h(cfg.name) + '</p><p class="login-sub">' + h(cfg.subtitle) + "</p></div></div>" +
         '    <h1 class="login-title">ログイン</h1>' +
         '    <p class="login-note">デモのため任意の値でログインできます</p>' +
-        App.field({ name: "loginId", label: "ログインID", required: true, value: "demo", attrs: ' autocomplete="off"' }) +
-        App.field({ name: "password", label: "パスワード", type: "password", required: true, value: "demo", attrs: ' autocomplete="off"' }) +
+        App.field({ name: "loginId", label: "ログインID", required: true, value: "demo", attrs: ' autocomplete="off" autocapitalize="off" spellcheck="false" data-1p-ignore data-lpignore="true"' }) +
+        // デモ用なので本物のパスワード欄（type="password"）にはしない。
+        // ブラウザのパスワード保存や「データ侵害で検出されました」の警告を出さないため、文字を伏せ字で表示するだけにする
+        App.field({ name: "password", label: "パスワード", type: "text", required: true, value: "demo", attrs: ' class="masked-input" autocomplete="off" autocapitalize="off" spellcheck="false" data-1p-ignore data-lpignore="true"' }) +
         '    <button type="submit" class="btn btn-primary btn-block">ログイン</button>' +
         '    <a class="login-back" href="' + cfg.portfolioUrl + '">ポートフォリオに戻る</a>' +
         "  </form>" +
