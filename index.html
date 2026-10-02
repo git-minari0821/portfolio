@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>m_t_se0821 | Webアプリ開発エンジニア ポートフォリオ</title>
+  <meta name="description" content="業務システム開発3年半＋PMO経験のWebアプリ開発エンジニア m_t_se0821 のポートフォリオ。要件整理から実装・公開まで一貫して対応します。">
+
+  <!-- OGP ※公開後、og:url と og:image を公開URL（https://〜）の絶対パスに差し替える -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="m_t_se0821 | Webアプリ開発エンジニア ポートフォリオ">
+  <meta property="og:description" content="業務システム開発3年半＋PMO経験のWebアプリ開発エンジニア。要件整理から実装・公開まで一貫して対応します。">
+  <meta property="og:url" content="https://example.vercel.app/">
+  <meta property="og:image" content="https://example.vercel.app/images/ogp.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">m_t_se0821</a>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#works">作品</a>
+        <a href="#career">経歴</a>
+        <a href="#skills">スキル</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== ファーストビュー ===== -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-name">m_t_se0821</p>
+        <h1 class="hero-title">Webアプリ開発エンジニア<span class="sep">／</span><br class="sp-only">業務システム開発3年半＋PMO</h1>
+        <p class="hero-lead">業務システムの要件定義から開発・テストまでの実務経験と、PMOとしてのプロジェクト管理経験を活かし、要件整理から実装・公開まで一貫して対応します。</p>
+        <div class="hero-actions">
+          <a href="#works" class="btn btn-primary">作品を見る</a>
+          <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 作品 ===== -->
+    <section id="works" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Works</span>作品</h2>
+
+        <div class="works-grid">
+
+          <!-- 作品1：Salesforce Learning Platform -->
+          <article class="work-card">
+            <!-- スクショ：images/salesforce-learning.png を配置する -->
+            <div class="work-thumb">
+              <img src="images/salesforce-learning.png" alt="Salesforce Learning Platform の画面" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="work-body">
+              <h3 class="work-title">Salesforce Learning Platform</h3>
+              <p class="work-meta">2026年7月〜現在（継続開発中）／個人開発（1人）</p>
+              <p class="work-desc">Salesforce資格学習向けWebアプリ。AIによる問題生成・解説、模試機能などを実装し、現在も機能追加・問題コンテンツの拡充を継続中。</p>
+
+              <dl class="work-detail">
+                <dt>主な機能</dt>
+                <dd>Google OAuthログイン、資格別の問題演習、カテゴリ別学習、AIによる問題・解説生成、AIチューター、模試モード、お気に入り・誤答復習、学習履歴・統計表示、管理画面（問題・資格・カテゴリ管理）、CSVによる問題一括登録、レスポンシブ対応</dd>
+                <dt>対応資格</dt>
+                <dd>Administrator、Platform App Builder、Platform Developer I</dd>
+                <dt>担当範囲</dt>
+                <dd>要件定義、画面設計、DB設計、API設計、UI実装、バックエンド実装、DB構築、認証機能、AI機能実装、テスト、Vercelへのデプロイ</dd>
+              </dl>
+
+              <ul class="tags" aria-label="使用技術">
+                <li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>Prisma</li><li>PostgreSQL</li><li>Supabase</li><li>OpenAI API</li><li>Auth.js</li><li>GitHub</li><li>Vercel</li>
+              </ul>
+
+              <a href="https://salesforce-learning-app.vercel.app/" class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+            </div>
+          </article>
+
+          <!-- 作品2：旅ストック -->
+          <article class="work-card">
+            <!-- スクショ：images/tabistock.png を配置する -->
+            <div class="work-thumb">
+              <img src="images/tabistock.png" alt="旅ストックの画面" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="work-body">
+              <h3 class="work-title">旅ストック</h3>
+              <p class="work-meta">2026年9月〜現在／個人開発（1人）</p>
+              <p class="work-desc">旅行の行き先を調べて保存するまでを、ひとつのアプリで完結できるWebサービス。</p>
+
+              <dl class="work-detail">
+                <dt>企画の背景</dt>
+                <dd>「SNSや検索サイトでは探しにくい」「見つけた場所を保存しておきたい」という自分自身の課題から企画し、企画から公開まで一人で担当。</dd>
+                <dt>特徴</dt>
+                <dd>景色・ご飯などの目的に加え、同行者や条件のタグで絞り込み可能。「雨の日でも楽しめる子連れスポット」のような自然な文章でもAIが検索。無料公開で利用状況を計測し、その結果をもとに有料プランを設計するという、実際のサービス運営を想定した進め方で開発。</dd>
+                <dt>担当範囲</dt>
+                <dd>企画・要件定義、画面設計・DB設計、AIによる自然文検索（プロンプト設計を含む）、タグ絞り込み検索、スポット保存・旅プラン作成機能、地図表示（Google Maps）、利用回数制限などのプラン設計、本番公開・アクセス解析の導入、Stripe決済導入（実装予定）</dd>
+              </dl>
+
+              <ul class="tags" aria-label="使用技術">
+                <li>Next.js</li><li>Supabase（PostgreSQL）</li><li>Claude API</li><li>Google Maps API</li><li>Vercel</li><li>GitHub</li>
+              </ul>
+
+              <a href="https://tabistock-three.vercel.app/" class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+            </div>
+          </article>
+
+          <!-- ============================================================
+               ★作品3：AI会社 ここから（本人が後で追記・修正する箇所）
+               - 説明文・担当範囲・使用技術は必要に応じて書き換える
+               - スクショは images/ai-company.png を配置
+               - 公開URLができたら、下の「準備中」ボタンを
+                 <a href="公開URL" class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+                 に差し替える
+               ============================================================ -->
+          <article class="work-card">
+            <div class="work-thumb">
+              <img src="images/ai-company.png" alt="AI会社（AIエージェントによる業務自動化基盤）の稼働画面" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="work-body">
+              <h3 class="work-title">AI会社（AIエージェントによる業務自動化基盤）</h3>
+              <p class="work-meta">現在ローカル環境で稼働中</p>
+              <p class="work-desc">個人事業の業務を支えるため、Claude Codeで構築した部門別のAIエージェント構成。部門ごとに役割を持つAI社員8名を配置し、Claw Empireでブラウザから稼働状況を確認できるところまで構築。</p>
+
+              <ul class="tags" aria-label="使用技術">
+                <li>Claude Code</li><li>Claw Empire</li>
+              </ul>
+
+              <span class="btn btn-disabled btn-block" aria-disabled="true">準備中</span>
+            </div>
+          </article>
+          <!-- ★作品3：AI会社 ここまで -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 経歴 ===== -->
+    <section id="career" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Career</span>経歴</h2>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <p class="timeline-period">2022/4〜2025/8</p>
+            <h3 class="timeline-role">SIer　SE</h3>
+            <ul class="timeline-projects">
+              <li>
+                <p class="project-name">医療（臨床検査）分野　蓄積データ検索システム構築</p>
+                <p>要件定義〜受け入れテストまで全工程。PM不在の中、単独で顧客対応と開発を完遂し納期を遵守</p>
+                <p class="project-tech">VB.NET、SQL Server、ActiveReports</p>
+              </li>
+              <li>
+                <p class="project-name">エネルギー業界　勘定系・販売管理システム開発</p>
+                <p>詳細設計・機能改修・単体テスト</p>
+                <p class="project-tech">VB.NET、VB6、SQL Server</p>
+              </li>
+              <li>
+                <p class="project-name">官公庁（医療分野）リスク管理システム再構築</p>
+                <p>サブリーダー。基本設計〜結合テスト、リーダー離脱後は進捗管理・技術支援を主導し納期どおりに完遂</p>
+                <p class="project-tech">OutSystems、JavaScript、CSS</p>
+              </li>
+              <li>
+                <p class="project-name">小売業　マスタシステム更改</p>
+                <p>詳細設計・開発・単体テスト、Backlogを用いたQA管理、新規参画者への技術支援</p>
+                <p class="project-tech">OutSystems、JavaScript、CSS、PostgreSQL、Backlog</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2025/9〜2026/6</p>
+            <h3 class="timeline-role">コンサルティング会社　PMO</h3>
+            <ul class="timeline-projects">
+              <li>
+                <p class="project-name">大手自動車メーカー　情報セキュリティ審査システム導入PMO（体制約100名）</p>
+                <p>進捗ダッシュボード集計、レポート作成、会議運営</p>
+              </li>
+              <li>
+                <p class="project-name">大手金融機関　複数システム開発案件PMO</p>
+                <p>最大1億円規模・ベンダー4社を含む約10案件の進捗・課題・リスクを横断管理。技術課題をマネジメント層に分かりやすく翻訳する「ブリッジPMO」</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2026/7〜現在</p>
+            <h3 class="timeline-role">コンサルティングファーム　Salesforceエンジニア</h3>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== スキル ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Skills</span>スキル</h2>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>言語</h3>
+            <ul class="tags">
+              <li>TypeScript</li><li>JavaScript</li><li>VB.NET</li><li>VB6</li><li>HTML / CSS</li><li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>フレームワーク・ライブラリ</h3>
+            <ul class="tags">
+              <li>React</li><li>Next.js</li><li>Node.js</li><li>Prisma</li><li>Auth.js</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>ローコード / SaaS</h3>
+            <ul class="tags">
+              <li>OutSystems</li><li>Salesforce</li><li class="tag-sub">学習中：Apex</li><li class="tag-sub">学習中：LWC</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>DB・インフラ</h3>
+            <ul class="tags">
+              <li>PostgreSQL</li><li>SQL Server</li><li>Supabase</li><li>Vercel</li><li>GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>AI</h3>
+            <ul class="tags">
+              <li>OpenAI API</li><li>Claude API</li><li>Claude Code</li><li>Codex</li>
+            </ul>
+            <p class="skill-note">AIを活用した設計・実装・テスト</p>
+          </div>
+          <div class="skill-group">
+            <h3>マネジメント</h3>
+            <ul class="tags">
+              <li>要件定義</li><li>基本・詳細設計</li><li>テスト設計</li><li>進捗・課題・リスク管理</li><li>マルチベンダー調整</li><li>Backlog</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="process">
+          <h3>対応可能な工程</h3>
+          <ol class="process-flow">
+            <li>要件定義</li><li>設計</li><li>実装</li><li>テスト</li><li>公開・運用</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== お問い合わせ ===== -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact">
+        <h2 class="section-title"><span class="en">Contact</span>お問い合わせ</h2>
+        <p class="contact-lead">お仕事のご相談は、各サービスのメッセージからお願いいたします。</p>
+
+        <div class="contact-actions">
+          <!-- ★ここにランサーズのプロフィールURLを入れる（href="#" を差し替え） -->
+          <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ランサーズのプロフィール</a>
+          <!-- ★ここにクラウドワークスのプロフィールURLを入れる（href="#" を差し替え） -->
+          <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">クラウドワークスのプロフィール</a>
+        </div>
+
+        <dl class="availability">
+          <dt>稼働目安</dt>
+          <dd>平日夜・土日中心、週10〜15時間程度（フルリモート）</dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2026 m_t_se0821</small>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,633 @@
+/* =========================================================
+   m_t_se0821 portfolio
+   白ベース＋紺〜青系のアクセント1色 / スマホファースト
+   ========================================================= */
+
+:root {
+  --color-accent: #1e40af;
+  --color-accent-dark: #1e3a8a;
+  --color-accent-soft: #eff4ff;
+  --color-text: #1f2937;
+  --color-text-sub: #5b6474;
+  --color-border: #e3e7ee;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f6f8fb;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 4px 16px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 2px 6px rgba(15, 23, 42, 0.08), 0 10px 28px rgba(15, 23, 42, 0.08);
+  --header-h: 60px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-wrap: anywhere;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.sp-only {
+  display: inline;
+}
+
+/* ---------- ヘッダー ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(6px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: var(--header-h);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav a {
+  padding: 6px 8px;
+  font-size: 13px;
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-primary {
+  color: #fff;
+  background: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+}
+
+.btn-outline {
+  color: var(--color-accent);
+  background: #fff;
+  border-color: var(--color-accent);
+}
+
+.btn-outline:hover {
+  background: var(--color-accent-soft);
+}
+
+.btn-disabled {
+  color: #8a93a3;
+  background: #eef0f4;
+  border-color: var(--color-border);
+  cursor: not-allowed;
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* ---------- ファーストビュー ---------- */
+.hero {
+  padding: 56px 0 64px;
+  background: linear-gradient(180deg, var(--color-accent-soft) 0%, #fff 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-name {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.hero-title {
+  margin-top: 8px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--color-accent-dark);
+}
+
+.hero-title .sep {
+  margin: 0 0.2em;
+  color: var(--color-text-sub);
+  font-weight: 400;
+}
+
+.hero-lead {
+  max-width: 680px;
+  margin-top: 20px;
+  color: var(--color-text-sub);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* ---------- セクション共通 ---------- */
+.section {
+  padding: 64px 0;
+}
+
+.section-alt {
+  background: var(--color-bg-alt);
+}
+
+.section-title {
+  margin-bottom: 32px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.section-title .en {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ---------- タグ ---------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags li {
+  padding: 2px 10px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--color-accent-dark);
+  background: var(--color-accent-soft);
+  border: 1px solid #d6e0fb;
+  border-radius: 999px;
+}
+
+.tags .tag-sub {
+  color: var(--color-text-sub);
+  background: #fff;
+  border-color: var(--color-border);
+}
+
+/* ---------- 作品 ---------- */
+.works-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.work-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* 画像が未配置でも枠の比率を保つ（16:10） */
+.work-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #e9edf4;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.work-thumb::before {
+  content: "スクリーンショット準備中";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #8a93a3;
+}
+
+.work-thumb img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  background: #e9edf4;
+}
+
+/* 読み込みに失敗した画像は隠して、下のダミー枠を見せる（js/main.js で付与） */
+.work-thumb img.is-missing {
+  visibility: hidden;
+}
+
+.work-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+}
+
+.work-title {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-accent-dark);
+}
+
+.work-meta {
+  margin-top: -8px;
+  font-size: 12px;
+  color: var(--color-text-sub);
+}
+
+.work-detail {
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.work-detail dt {
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.work-detail dt:first-child {
+  margin-top: 0;
+}
+
+.work-detail dd {
+  color: var(--color-text-sub);
+}
+
+.work-body .btn-block {
+  margin-top: auto;
+}
+
+/* ---------- 経歴（タイムライン） ---------- */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 5px;
+  width: 2px;
+  background: #d6e0fb;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 36px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -24px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 3px solid var(--color-accent);
+  border-radius: 50%;
+}
+
+.timeline-period {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.timeline-role {
+  margin-top: 2px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.timeline-projects {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.timeline-projects li {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--color-text-sub);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.project-name {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.project-tech {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--color-accent-dark);
+}
+
+.project-tech::before {
+  content: "使用技術：";
+  color: var(--color-text-sub);
+}
+
+/* ---------- スキル ---------- */
+.skills-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.skill-group {
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.skill-group h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.skill-note {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-sub);
+}
+
+.process {
+  margin-top: 32px;
+}
+
+.process h3 {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.process-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.process-flow li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.process-flow li:not(:last-child)::after {
+  content: "→";
+  color: var(--color-accent);
+}
+
+.process-flow li {
+  white-space: nowrap;
+}
+
+/* ---------- お問い合わせ ---------- */
+.contact-lead {
+  color: var(--color-text-sub);
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.availability {
+  margin-top: 28px;
+  padding: 16px 18px;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.availability dt {
+  font-weight: 700;
+}
+
+.availability dd {
+  color: var(--color-text-sub);
+}
+
+/* ---------- フッター ---------- */
+.site-footer {
+  padding: 24px 0;
+  text-align: center;
+  color: #c9d3ea;
+  background: var(--color-accent-dark);
+}
+
+/* =========================================================
+   タブレット以上
+   ========================================================= */
+@media (min-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .sp-only {
+    display: none;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .nav a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 88px 0 96px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .section {
+    padding: 88px 0;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .availability {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+/* =========================================================
+   PC
+   ========================================================= */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .timeline-item::before {
+    left: -32px;
+  }
+
+  .timeline-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .work-card,
+  .work-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
