@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>博多もつ鍋 かざぐるま｜天神のもつ鍋・居酒屋【制作サンプル】</title>
+  <meta name="description" content="福岡・天神のもつ鍋と博多の一品料理の居酒屋。日本語・英語・韓国語・中国語に対応（制作実績用の架空のサンプルです）。">
+
+  <!-- OGP ※公開後、URL を公開URLに差し替える -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="博多もつ鍋 かざぐるま｜天神のもつ鍋・居酒屋【制作サンプル】">
+  <meta property="og:description" content="福岡・天神のもつ鍋と博多の一品料理の居酒屋。日本語・英語・韓国語・中国語に対応（制作実績用の架空のサンプルです）。">
+  <meta property="og:url" content="https://m-t-se0821-portfolio.vercel.app/samples/restaurant/">
+  <meta property="og:image" content="https://m-t-se0821-portfolio.vercel.app/samples/restaurant/images/ogp.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23141210'/%3E%3Cpath d='M20 20 20 6a7 7 0 0 1 0 14M20 20h14a7 7 0 0 1-14 0M20 20v14a7 7 0 0 1 0-14M20 20H6a7 7 0 0 1 14 0' fill='%23c8402b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="i18n.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <p class="sample-notice" data-i18n="notice">※このページは制作実績用のサンプルです。実在の企業・店舗とは関係ありません。</p>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20 20 6a7 7 0 0 1 0 14M20 20h14a7 7 0 0 1-14 0M20 20v14a7 7 0 0 1 0-14M20 20H6a7 7 0 0 1 14 0"/></svg>
+        <span class="logo-text"><small>博多もつ鍋</small>かざぐるま</span>
+      </a>
+
+      <div class="header-tools">
+        <!-- 言語切り替え -->
+        <div class="lang">
+          <button type="button" class="lang-btn" aria-expanded="false" aria-controls="lang-list">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+            <span class="lang-current">日本語</span>
+          </button>
+          <ul id="lang-list" class="lang-list" hidden aria-label="表示する言語を選ぶ" data-i18n-attr="aria-label:lang.choose"></ul>
+        </div>
+
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く" data-i18n-attr="aria-label:nav.open">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav id="global-nav" class="nav" aria-label="メニュー">
+        <a href="#concept" data-i18n="nav.concept">こだわり</a>
+        <a href="#menu" data-i18n="nav.menu">お品書き</a>
+        <a href="#course" data-i18n="nav.course">コース</a>
+        <a href="#gallery" data-i18n="nav.gallery">店内</a>
+        <a href="#info" data-i18n="nav.info">店舗情報</a>
+        <a href="#reserve" class="nav-cta" data-i18n="nav.reserve">ご予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== ファーストビュー ===== -->
+    <section class="hero">
+      <div class="hero-photo ph" data-label="Photo">
+        <img src="images/hero.jpg" alt="" width="1600" height="1000">
+      </div>
+      <div class="hero-content">
+        <p class="hero-area" data-i18n="hero.area">福岡・天神</p>
+        <h1 class="hero-title" data-i18n-html="hero.title">湯気の向こうに、<br>博多の夜。</h1>
+        <p class="hero-lead" data-i18n-html="hero.lead">職人が毎朝仕込む国産牛もつと、九州の野菜をたっぷり。<br>旅の夜にも、仕事帰りの一杯にも。</p>
+        <div class="hero-actions">
+          <a href="#reserve" class="btn btn-red" data-i18n="hero.reserve">席を予約する</a>
+          <a href="#menu" class="btn btn-ghost" data-i18n="hero.menu">お品書きを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== こだわり ===== -->
+    <section id="concept" class="section section-paper">
+      <div class="container">
+        <h2 class="section-title"><span class="en">CONCEPT</span><span data-i18n="concept.title">かざぐるまのこだわり</span></h2>
+        <div class="concept-list">
+          <article class="concept">
+            <p class="concept-num">壱</p>
+            <h3 data-i18n="concept.1.title">毎朝仕込む国産牛もつ</h3>
+            <p data-i18n="concept.1.text">鮮度のよい国産牛の小腸だけを使い、毎朝ていねいに下処理。ぷるっとした脂の甘みが自慢です。</p>
+          </article>
+          <article class="concept">
+            <p class="concept-num">弐</p>
+            <h3 data-i18n="concept.2.title">二種類から選べるスープ</h3>
+            <p data-i18n="concept.2.text">あごだしを効かせた「醤油」と、九州麦みその「みそ」。どちらも自家製です。</p>
+          </article>
+          <article class="concept">
+            <p class="concept-num">参</p>
+            <h3 data-i18n="concept.3.title">九州の野菜をたっぷり</h3>
+            <p data-i18n="concept.3.text">キャベツとニラは、福岡近郊の契約農家から。季節によって産地が変わります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== お品書き（i18n.js の MENU から表示） ===== -->
+    <section id="menu" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title section-title-light"><span class="en">MENU</span><span data-i18n="menu.title">お品書き</span></h2>
+        <div class="tabs">
+          <div class="tab-list" role="tablist" aria-label="お品書き">
+            <button type="button" role="tab" id="tab-nabe" aria-controls="panel-nabe" aria-selected="true" data-i18n="menu.tab.nabe">もつ鍋</button>
+            <button type="button" role="tab" id="tab-dish" aria-controls="panel-dish" aria-selected="false" tabindex="-1" data-i18n="menu.tab.dish">一品料理</button>
+            <button type="button" role="tab" id="tab-drink" aria-controls="panel-drink" aria-selected="false" tabindex="-1" data-i18n="menu.tab.drink">ドリンク</button>
+          </div>
+          <div id="panel-nabe" class="tab-panel" role="tabpanel" aria-labelledby="tab-nabe" tabindex="0"><ul class="menu-list" data-menu="nabe"></ul></div>
+          <div id="panel-dish" class="tab-panel" role="tabpanel" aria-labelledby="tab-dish" tabindex="0" hidden><ul class="menu-list" data-menu="dish"></ul></div>
+          <div id="panel-drink" class="tab-panel" role="tabpanel" aria-labelledby="tab-drink" tabindex="0" hidden><ul class="menu-list" data-menu="drink"></ul></div>
+        </div>
+        <div class="menu-legend">
+          <p data-i18n="menu.note">価格はすべて税込です。アレルギーが心配な方は、ご注文の際にスタッフへお声がけください。</p>
+          <p><span class="chili" aria-hidden="true"></span><span data-i18n="menu.legend.spicy">唐辛子のマークは辛さの目安です（最大3）</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== コース ===== -->
+    <section id="course" class="section section-paper">
+      <div class="container">
+        <h2 class="section-title"><span class="en">COURSE</span><span data-i18n="course.title">コース</span></h2>
+        <div class="course-list" data-courses></div>
+        <p class="note-center" data-i18n="course.note">コースは2名様から、前日までのご予約で承ります。</p>
+      </div>
+    </section>
+
+    <!-- ===== 店内の様子 ===== -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="en">GALLERY</span><span data-i18n="gallery.title">店内の様子</span></h2>
+        <ul class="gallery">
+          <li><figure><div class="ph" data-label="Photo"><img src="images/counter.jpg" alt="厨房の様子が見えるカウンター席" data-i18n-attr="alt:gallery.counter.alt" loading="lazy"></div><figcaption data-i18n="gallery.counter">カウンター席</figcaption></figure></li>
+          <li><figure><div class="ph" data-label="Photo"><img src="images/table.jpg" alt="4名掛けのテーブル席" data-i18n-attr="alt:gallery.table.alt" loading="lazy"></div><figcaption data-i18n="gallery.table">テーブル席</figcaption></figure></li>
+          <li><figure><div class="ph" data-label="Photo"><img src="images/zashiki.jpg" alt="掘りごたつ式の個室" data-i18n-attr="alt:gallery.zashiki.alt" loading="lazy"></div><figcaption data-i18n="gallery.zashiki">掘りごたつの個室</figcaption></figure></li>
+          <li><figure><div class="ph" data-label="Photo"><img src="images/nabe.jpg" alt="湯気の立つもつ鍋" data-i18n-attr="alt:gallery.nabe.alt" loading="lazy"></div><figcaption data-i18n="gallery.nabe">もつ鍋</figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 店舗情報 ===== -->
+    <section id="info" class="section section-paper">
+      <div class="container">
+        <h2 class="section-title"><span class="en">INFORMATION</span><span data-i18n="info.title">店舗情報</span></h2>
+        <div class="info">
+          <dl class="info-list">
+            <dt data-i18n="info.name">店名</dt><dd data-i18n="info.name.value">博多もつ鍋 かざぐるま</dd>
+            <dt data-i18n="info.hours">営業時間</dt><dd data-i18n="info.hours.value">17:00〜24:00（料理L.O. 23:00／ドリンクL.O. 23:30）</dd>
+            <dt data-i18n="info.closed">定休日</dt><dd data-i18n="info.closed.value">毎週月曜日（祝日の場合は翌日）</dd>
+            <dt data-i18n="info.address">住所</dt><dd data-i18n="info.address.value">福岡県福岡市中央区天神〇丁目〇-〇 〇〇ビル1F</dd>
+            <dt data-i18n="info.access">アクセス</dt><dd data-i18n="info.access.value">地下鉄「天神駅」〇番出口から徒歩5分</dd>
+            <dt data-i18n="info.seats">席数</dt><dd data-i18n="info.seats.value">36席（カウンター8席・テーブル16席・個室12席）</dd>
+            <dt data-i18n="info.payment">お支払い</dt><dd data-i18n="info.payment.value">現金、クレジットカード、交通系ICカード、QRコード決済</dd>
+            <dt data-i18n="info.smoking">喫煙</dt><dd data-i18n="info.smoking.value">全席禁煙</dd>
+          </dl>
+          <div class="map ph" data-label="Map" data-i18n-attr="data-label:info.map">
+            <img src="images/map.jpg" alt="かざぐるままでの地図" data-i18n-attr="alt:info.map.alt" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ご予約 ===== -->
+    <section id="reserve" class="section section-red">
+      <div class="container reserve">
+        <h2 class="section-title section-title-light"><span class="en">RESERVATION</span><span data-i18n="reserve.title">ご予約</span></h2>
+        <p data-i18n="reserve.lead">お電話、または予約サイトから承っています。当日のご予約は、お電話がつながりやすいです。</p>
+        <div class="reserve-actions">
+          <!-- 電話番号を入れる（例：tel:0000000000） -->
+          <a href="tel:0000000000" class="reserve-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+            <span><strong data-i18n="reserve.tel">電話で予約する</strong><small><span class="num">000-0000-0000</span>／<span data-i18n="reserve.telNote">受付 15:00〜23:00</span></small></span>
+          </a>
+          <!-- 予約サイトのURLを入れる -->
+          <a href="#" class="reserve-btn reserve-btn-light js-sample-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <span><strong data-i18n="reserve.web">予約サイトで予約する</strong><small data-i18n="reserve.webNote">24時間受付</small></span>
+          </a>
+        </div>
+        <p class="reserve-foreign" data-i18n="reserve.foreign">英語・韓国語・中国語でのご予約は、予約サイトをご利用ください。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer-logo">博多もつ鍋 かざぐるま</p>
+    <small data-i18n="footer.copy">© Hakata Motsunabe Kazaguruma（サンプル）</small>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

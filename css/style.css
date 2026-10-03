@@ -389,6 +389,67 @@ a {
   color: var(--color-text-sub);
 }
 
+/* ---------- 業務改善・DX提案 ---------- */
+.dx-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+  counter-reset: none;
+}
+
+.dx-steps li,
+.dx-steps a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+  background: var(--color-accent-soft);
+  border-radius: 8px;
+}
+
+.dx-steps li:has(a) {
+  padding: 0;
+  background: none;
+}
+
+.dx-steps a {
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  background: var(--color-accent);
+}
+
+.dx-steps a:hover {
+  background: var(--color-accent-dark);
+}
+
+.dx-step-num {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  color: var(--color-accent);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.case-link {
+  font-size: 13px;
+}
+
 /* ---------- 経歴（タイムライン） ---------- */
 .timeline {
   position: relative;
@@ -609,6 +670,21 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .dx-steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dx-steps li:not(:last-child) {
+    position: relative;
+  }
+
+  .dx-steps li:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -8px;
+    color: var(--color-accent);
+  }
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -638,6 +714,21 @@ a {
 
   .works-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .case-card {
+    flex-direction: row;
+  }
+
+  .case-card .work-thumb {
+    flex: 0 0 52%;
+    aspect-ratio: auto;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 0;
+  }
+
+  .case-card .work-body {
+    padding: 28px;
   }
 
   .skills-grid {

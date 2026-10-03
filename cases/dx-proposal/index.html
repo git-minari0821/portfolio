@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>在庫管理の業務改善のご提案｜株式会社こもれび雑貨店 様【制作サンプル】</title>
+  <meta name="description" content="Excelと紙で行っていた在庫管理を見直し、システム化するまでの提案資料のサンプルです。業務フローの整理、課題の分析、機能一覧、スケジュール、費用感をまとめています（制作実績用の架空の内容です）。">
+
+  <!-- OGP ※公開後、URL を公開URLに差し替える -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="在庫管理の業務改善のご提案【制作サンプル】">
+  <meta property="og:description" content="ヒアリングから業務整理、システム化の提案までをまとめた提案資料のサンプルです（制作実績用の架空の内容です）。">
+  <meta property="og:url" content="https://m-t-se0821-portfolio.vercel.app/cases/dx-proposal/">
+  <meta property="og:image" content="https://m-t-se0821-portfolio.vercel.app/images/case-dx.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f5f5b'/%3E%3Cpath d='M8 22l6-6 4 4 7-8' fill='none' stroke='%23e3a63c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="diagrams.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <p class="sample-notice">※このページは制作実績用のサンプルです。実在の企業・店舗とは関係ありません。記載の数値・費用はすべて架空です。</p>
+
+  <div class="toolbar no-print">
+    <a class="toolbar-back" href="../../#dx">← ポートフォリオに戻る</a>
+    <button type="button" class="toolbar-btn" data-print>印刷・PDFで保存</button>
+  </div>
+
+  <div class="layout">
+    <!-- ===== 目次 ===== -->
+    <nav class="toc no-print" aria-label="目次">
+      <p class="toc-title">目次</p>
+      <ol>
+        <li><a href="#s1">表紙</a></li>
+        <li><a href="#s2">ご相談の背景</a></li>
+        <li><a href="#s3">現状の業務フロー</a></li>
+        <li><a href="#s4">課題の整理</a></li>
+        <li><a href="#s5">改善後の業務フロー</a></li>
+        <li><a href="#s6">システム化の範囲</a></li>
+        <li><a href="#s7">機能一覧</a></li>
+        <li><a href="#s8">画面イメージ</a></li>
+        <li><a href="#s9">導入スケジュール</a></li>
+        <li><a href="#s10">期待される効果</a></li>
+        <li><a href="#s11">費用感の目安</a></li>
+      </ol>
+    </nav>
+
+    <main class="deck">
+
+      <!-- 1. 表紙 -->
+      <section id="s1" class="slide cover" aria-labelledby="s1-title">
+        <p class="cover-to">株式会社こもれび雑貨店 御中</p>
+        <h1 id="s1-title" class="cover-title">在庫管理の業務改善と<br>システム化のご提案</h1>
+        <p class="cover-sub">〜 紙とExcelの在庫管理から、3店舗の在庫が「いつでも、すぐ」わかる仕組みへ 〜</p>
+        <dl class="cover-meta">
+          <dt>提案日</dt><dd>2026年10月3日</dd>
+          <dt>提案者</dt><dd>m_t_se0821</dd>
+        </dl>
+        <p class="cover-note">※制作実績用のサンプルです。会社名・数値・費用はすべて架空です。</p>
+      </section>
+
+      <!-- 2. ご相談の背景 -->
+      <section id="s2" class="slide" aria-labelledby="s2-title">
+        <header class="slide-head"><p class="slide-num">01</p><h2 id="s2-title">ご相談の背景</h2></header>
+        <div class="cols-2">
+          <div>
+            <h3 class="h3">現在の状況</h3>
+            <ul class="bullets">
+              <li>雑貨店を<strong>3店舗</strong>運営（スタッフ約20名・商品約400品目）</li>
+              <li>入荷・販売の記録は<strong>紙の台帳</strong>に書き、閉店後に店長が<strong>Excel</strong>へ転記している</li>
+              <li>本部は週1回、各店のExcelをメールで受け取り、手作業で集計している</li>
+              <li>発注は、店長が棚を見て「少ない」と気づいた商品を電話で依頼している</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="h3">お困りごと（ヒアリングより）</h3>
+            <ul class="voice-list">
+              <li>「人気商品が<strong>気づいたら欠品</strong>していて、お客様をお待たせしてしまう」</li>
+              <li>「逆に、売れない商品を<strong>多く仕入れすぎて</strong>倉庫がいっぱい」</li>
+              <li>「月末の<strong>棚卸に丸2日</strong>かかり、その間は店が回らない」</li>
+              <li>「本部では、今どの店に何がいくつあるのか<strong>すぐにわからない</strong>」</li>
+            </ul>
+          </div>
+        </div>
+        <p class="summary-box">今回のご提案のゴール：<strong>在庫の数を「その場で・全店で」正しく把握し、欠品と過剰在庫を減らすこと。</strong>あわせて、転記や集計などの手作業を減らします。</p>
+      </section>
+
+      <!-- 3. 現状の業務フロー -->
+      <section id="s3" class="slide" aria-labelledby="s3-title">
+        <header class="slide-head"><p class="slide-num">02</p><h2 id="s3-title">現状の業務フロー</h2>
+          <p class="slide-lead">誰が・いつ・何をしているかを、担当者ごとの列に分けて整理しました（スイムレーン図）。</p></header>
+        <figure class="diagram">
+          <div class="diagram-scroll" data-swimlane="current"></div>
+          <figcaption class="legend"><span class="legend-box is-problem"></span>課題がある作業（次のページで整理）</figcaption>
+        </figure>
+      </section>
+
+      <!-- 4. 課題の整理 -->
+      <section id="s4" class="slide" aria-labelledby="s4-title">
+        <header class="slide-head"><p class="slide-num">03</p><h2 id="s4-title">課題の整理</h2>
+          <p class="slide-lead">起きている問題を「原因」と「業務への影響」に分けて整理しました。</p></header>
+        <div class="table-scroll">
+          <table class="issue-table">
+            <thead><tr><th scope="col">課題</th><th scope="col">原因</th><th scope="col">業務への影響</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">①在庫の数がすぐにわからない</th><td>記録が紙 → Excel → メールと3段階あり、反映まで最大1週間かかる</td><td>本部・店長が古い数字で判断している。店舗間で在庫を融通できない</td></tr>
+              <tr><th scope="row">②欠品が起きる</th><td>「少なくなったら発注する」基準が決まっておらず、店長の目視に頼っている</td><td>売れ筋商品を売り逃している。お客様の取り置き・お待たせが発生</td></tr>
+              <tr><th scope="row">③過剰在庫が起きる</th><td>売れ行きのデータが見られず、勘で多めに仕入れている</td><td>倉庫が手狭になり、セールでの値引きが増えている</td></tr>
+              <tr><th scope="row">④転記・集計に時間がかかる</th><td>同じ内容を紙とExcelに二重に記録し、本部で手作業で集計している</td><td>店長の残業（毎日約30分）、転記ミスによる数のずれ</td></tr>
+              <tr><th scope="row">⑤棚卸が大変</th><td>全商品を数えて紙に書き、Excelの数と1つずつ照らし合わせている</td><td>月末に2日間、通常業務が止まる</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">※サンプル用の架空の内容です。数値はヒアリング結果を想定した例です。</p>
+      </section>
+
+      <!-- 5. 改善後の業務フロー -->
+      <section id="s5" class="slide" aria-labelledby="s5-title">
+        <header class="slide-head"><p class="slide-num">04</p><h2 id="s5-title">改善後の業務フロー</h2>
+          <p class="slide-lead">記録を1か所（在庫管理システム）にまとめ、転記と集計の作業をなくします。</p></header>
+        <figure class="diagram">
+          <div class="diagram-scroll" data-swimlane="future"></div>
+          <figcaption class="legend"><span class="legend-box is-changed"></span>やり方が変わる作業　<span class="legend-gone">なくなる作業：紙への記入・Excelへの転記・メールでの集計</span></figcaption>
+        </figure>
+      </section>
+
+      <!-- 6. システム化の範囲 -->
+      <section id="s6" class="slide" aria-labelledby="s6-title">
+        <header class="slide-head"><p class="slide-num">05</p><h2 id="s6-title">システム化の範囲</h2>
+          <p class="slide-lead">費用と効果のバランスを見て、「今回システムにする業務」と「今のやり方を続ける業務」を分けました。</p></header>
+        <div class="cols-2">
+          <div class="scope scope-in">
+            <h3 class="h3">今回システム化する業務</h3>
+            <ul class="scope-list">
+              <li><span class="prio prio-must">Must</span>入庫・出庫・棚卸の記録と、在庫数の自動計算</li>
+              <li><span class="prio prio-must">Must</span>発注点（＝この数を下回ったら発注する目安）による警告</li>
+              <li><span class="prio prio-must">Must</span>発注書の作成と、入荷の記録</li>
+              <li><span class="prio prio-should">Should</span>3店舗の在庫の切り替え表示と、店舗間の移動</li>
+              <li><span class="prio prio-should">Should</span>商品データのCSV取り込み（今のExcelから移行）</li>
+              <li><span class="prio prio-could">Could</span>在庫の推移グラフ・売れ筋の分析</li>
+            </ul>
+          </div>
+          <div class="scope scope-out">
+            <h3 class="h3">今のやり方を続ける業務</h3>
+            <ul class="scope-list">
+              <li>レジ（POS）での会計 … 現在のレジをそのまま使います</li>
+              <li>会計ソフトへの入力 … システムからCSVを出して取り込みます</li>
+              <li>仕入先への発注の連絡 … 作成した発注書をメールで送ります</li>
+            </ul>
+            <p class="term"><strong>用語：</strong>Must＝必ず必要／Should＝できればほしい／Could＝余裕があれば。予算や時期に合わせて範囲を調整できます。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. 機能一覧 -->
+      <section id="s7" class="slide" aria-labelledby="s7-title">
+        <header class="slide-head"><p class="slide-num">06</p><h2 id="s7-title">機能一覧（簡易の要件定義）</h2>
+          <p class="slide-lead">システムに入れる機能を一覧にしました。要件定義（＝作る内容を決める工程）で、お客様と一緒に確定します。</p></header>
+        <div class="table-scroll">
+          <table class="func-table">
+            <thead><tr><th scope="col">機能名</th><th scope="col">概要</th><th scope="col">主な利用者</th><th scope="col">優先度</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">ログイン・権限</th><td>スタッフ・店長・本部で、使える機能を分ける</td><td>全員</td><td><span class="prio prio-must">Must</span></td></tr>
+              <tr><th scope="row">商品マスタ</th><td>商品コード・名前・仕入先・単価・発注点を登録</td><td>本部</td><td><span class="prio prio-must">Must</span></td></tr>
+              <tr><th scope="row">入出庫の登録</th><td>入荷・販売・破損などを記録し、在庫数を自動で更新</td><td>店舗スタッフ</td><td><span class="prio prio-must">Must</span></td></tr>
+              <tr><th scope="row">発注点アラート</th><td>在庫が発注点を下回った商品を、ダッシュボードで警告</td><td>店長・本部</td><td><span class="prio prio-must">Must</span></td></tr>
+              <tr><th scope="row">発注書の作成</th><td>警告が出た商品から発注書を作成（仕入先ごとに分割）</td><td>店長</td><td><span class="prio prio-must">Must</span></td></tr>
+              <tr><th scope="row">入荷の記録</th><td>「入荷済み」にすると、発注した数が自動で入庫される</td><td>店舗スタッフ</td><td><span class="prio prio-must">Must</span></td></tr>
+              <tr><th scope="row">棚卸</th><td>実際の数を入力すると、差と原因のメモを記録</td><td>店舗スタッフ</td><td><span class="prio prio-must">Must</span></td></tr>
+              <tr><th scope="row">店舗の切り替え・店舗間移動</th><td>3店舗の在庫を切り替えて表示し、店舗間で在庫を移す</td><td>店長・本部</td><td><span class="prio prio-should">Should</span></td></tr>
+              <tr><th scope="row">CSV取り込み・出力</th><td>今のExcelから商品を一括登録／会計ソフト用に出力</td><td>本部</td><td><span class="prio prio-should">Should</span></td></tr>
+              <tr><th scope="row">在庫推移・分析</th><td>商品ごとの在庫の推移や、売れ筋をグラフで表示</td><td>本部</td><td><span class="prio prio-could">Could</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 8. 画面イメージ -->
+      <section id="s8" class="slide" aria-labelledby="s8-title">
+        <header class="slide-head"><p class="slide-num">07</p><h2 id="s8-title">画面イメージ</h2>
+          <p class="slide-lead">実際に操作できるデモを用意しました。発注点の警告、発注書の作成から入荷までの流れをお試しいただけます。</p></header>
+        <div class="screen">
+          <a class="screen-shot" href="../../systems/inventory/" target="_blank" rel="noopener">
+            <img src="../../images/sys-inventory.png" alt="在庫・発注管理システムのダッシュボード画面。在庫切れ件数、発注点を下回った商品の一覧、在庫推移のグラフが表示されている" width="1280" height="800" loading="lazy">
+          </a>
+          <div>
+            <h3 class="h3">デモで確認できること</h3>
+            <ul class="bullets">
+              <li>ダッシュボード：在庫切れ・発注点を下回った商品が一目でわかる</li>
+              <li>入出庫登録：在庫がマイナスになる出庫はエラーで止まる</li>
+              <li>発注管理：警告が出た商品から発注書を作り、入荷で自動入庫</li>
+              <li>CSV取り込み：取り込み前にエラーの行を確認できる</li>
+            </ul>
+            <p><a class="link-btn" href="../../systems/inventory/" target="_blank" rel="noopener">在庫・発注管理のデモを開く <span aria-hidden="true">↗</span></a></p>
+            <p class="note">※デモは1店舗版です。任意のIDでログインできます。データはお使いのブラウザ内にのみ保存されます。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 導入スケジュール -->
+      <section id="s9" class="slide" aria-labelledby="s9-title">
+        <header class="slide-head"><p class="slide-num">08</p><h2 id="s9-title">導入スケジュール（約2か月）</h2>
+          <p class="slide-lead">開発中も週1回、動く画面をお見せしながら進めるので、途中でのご要望も反映できます。</p></header>
+        <div class="table-scroll"><div data-gantt></div></div>
+        <p class="note">※繁忙期（12月）を避けて、11月中の本番開始を想定した例です。</p>
+      </section>
+
+      <!-- 10. 期待される効果 -->
+      <section id="s10" class="slide" aria-labelledby="s10-title">
+        <header class="slide-head"><p class="slide-num">09</p><h2 id="s10-title">期待される効果</h2></header>
+        <div class="effects">
+          <article class="effect"><h3>欠品と売り逃しを減らせる</h3><p>発注点を下回るとすぐに警告が出るので、「気づいたら品切れ」を防げます。</p></article>
+          <article class="effect"><h3>仕入れの判断がしやすくなる</h3><p>在庫の推移を見ながら発注できるので、勘に頼った仕入れが減り、過剰在庫を抑えられます。</p></article>
+          <article class="effect"><h3>転記・集計の作業がなくなる</h3><p>記録は1回だけ。店長の閉店後の転記と、本部の集計作業がなくなります。</p></article>
+          <article class="effect"><h3>本部がいつでも全店を見られる</h3><p>3店舗の在庫がその場で反映されるので、店舗間で在庫を融通する判断がすぐにできます。</p></article>
+        </div>
+        <div class="estimate">
+          <p class="estimate-title">作業時間の試算例 <span class="tag">※試算例・架空</span></p>
+          <table class="estimate-table">
+            <thead><tr><th scope="col">作業</th><th scope="col">現在</th><th scope="col">導入後（想定）</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">台帳からExcelへの転記（3店舗）</th><td>1日 約30分 × 3店舗</td><td>なし</td></tr>
+              <tr><th scope="row">本部での在庫の集計</th><td>週 約3時間</td><td>なし（画面で確認）</td></tr>
+              <tr><th scope="row">月末の棚卸</th><td>約2日</td><td>約1日</td></tr>
+            </tbody>
+          </table>
+          <p class="note">※ヒアリング内容を仮定した試算例です。実際の効果は、商品数や運用方法によって変わります。</p>
+        </div>
+      </section>
+
+      <!-- 11. 費用感の目安 -->
+      <section id="s11" class="slide" aria-labelledby="s11-title">
+        <header class="slide-head"><p class="slide-num">10</p><h2 id="s11-title">費用感の目安</h2>
+          <p class="slide-lead">最終的な金額は、要件定義で機能を確定したうえでお見積りします。<strong>規模により変動します。</strong></p></header>
+        <div class="table-scroll">
+          <table class="cost-table">
+            <thead><tr><th scope="col">工程</th><th scope="col">内容</th><th scope="col">費用の目安（税抜）</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">要件定義・設計</th><td>ヒアリング、業務フローの整理、画面・データの設計</td><td>20万〜35万円</td></tr>
+              <tr><th scope="row">開発</th><td>Must・Shouldの機能の開発</td><td>60万〜100万円</td></tr>
+              <tr><th scope="row">テスト</th><td>動作確認、お客様との受け入れ確認</td><td>15万〜25万円</td></tr>
+              <tr><th scope="row">導入・操作説明</th><td>商品データの移行、スタッフ向け説明会（2回）</td><td>10万〜15万円</td></tr>
+              <tr class="cost-total"><th scope="row">合計</th><td></td><td>105万〜175万円</td></tr>
+              <tr><th scope="row">運用・保守（月額）</th><td>サーバー費用、問い合わせ対応、軽微な修正</td><td>月1万〜3万円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">※費用はすべてサンプル用の架空の目安です。Couldの機能を後から追加する、段階的な導入も可能です。</p>
+        <div class="next-step">
+          <h3 class="h3">次のステップ</h3>
+          <ol class="next-list"><li>本提案の内容についてご意見をいただく</li><li>要件定義の打ち合わせ（2〜3回）で機能を確定</li><li>正式なお見積りとスケジュールのご提示</li></ol>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

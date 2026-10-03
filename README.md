@@ -11,10 +11,14 @@ portfolio/
 ├── css/style.css     スタイル
 ├── js/main.js        画像が未配置のときにダミー枠を出すだけの処理
 ├── images/           スクショ・OGP画像の置き場（images/README.md 参照）
-├── samples/          LP制作サンプル（架空の店舗・企業）
+├── samples/          Webサイト・LP制作サンプル（架空の店舗・企業）
+│   ├── corporate/    コーポレートサイト（5ページ）
+│   ├── restaurant/   飲食店の多言語サイト（4言語）
 │   ├── seitai/       整体院LP
 │   ├── recruit/      採用LP
 │   └── school/       オンライン講座LP
+├── cases/
+│   └── dx-proposal/  業務改善・DX提案の資料（印刷・PDF対応）
 ├── systems/          業務システムのデモ（データはブラウザの localStorage に保存）
 │   ├── common/       3本で共通の部品（保存・一覧表・モーダル・画面の枠組み）
 │   ├── reserve/      予約・顧客管理

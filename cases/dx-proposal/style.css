@@ -1,0 +1,248 @@
+/* 業務改善の提案資料（サンプル）  深い青緑×からし色 / 読みやすさ重視の資料デザイン */
+
+:root {
+  --main: #1f5f5b;
+  --main-dark: #164542;
+  --main-soft: #e7f1f0;
+  --accent: #e3a63c;
+  --accent-soft: #fdf3df;
+  --problem: #c4502f;
+  --problem-soft: #fbe9e3;
+  --text: #22302f;
+  --text-sub: #5b6b69;
+  --border: #d8e2e0;
+  --bg: #eef2f1;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "BIZ UDPGothic", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+  background: var(--bg);
+  overflow-wrap: anywhere;
+}
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--main); }
+.visually-hidden { position: absolute; top: 0; left: 0; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.sample-notice { padding: 5px 16px; font-size: 11px; line-height: 1.6; text-align: center; color: #fff; background: #33403f; }
+
+.toolbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--border); }
+.toolbar-back { font-size: 13px; }
+.toolbar-btn { min-height: 38px; padding: 6px 16px; font-family: inherit; font-size: 14px; font-weight: 700; color: #fff; background: var(--main); border: 0; border-radius: 6px; cursor: pointer; }
+.toolbar-btn:hover { background: var(--main-dark); }
+
+.layout { max-width: 1240px; margin: 0 auto; padding: 16px 12px 64px; }
+
+/* 目次 */
+.toc { margin-bottom: 16px; padding: 16px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; }
+.toc-title { margin-bottom: 6px; font-weight: 700; }
+.toc ol { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; font-size: 13px; counter-reset: toc; }
+.toc li { counter-increment: toc; }
+.toc a { display: block; padding: 4px 6px; color: var(--text); text-decoration: none; border-radius: 4px; }
+.toc a::before { content: counter(toc) ". "; color: var(--text-sub); }
+.toc a:hover { background: var(--main-soft); }
+.toc a[aria-current] { font-weight: 700; color: var(--main-dark); background: var(--main-soft); }
+
+/* スライド */
+.deck { display: grid; gap: 16px; min-width: 0; }
+.deck > * { min-width: 0; }
+.slide { position: relative; padding: 24px 18px 28px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(20, 50, 48, 0.08); }
+.slide-head { margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid var(--main); }
+.slide-num { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); }
+.slide-head h2 { font-size: 22px; line-height: 1.4; color: var(--main-dark); }
+.slide-lead { margin-top: 6px; font-size: 14px; color: var(--text-sub); }
+.h3 { margin-bottom: 8px; padding-left: 10px; font-size: 16px; border-left: 4px solid var(--accent); }
+.note { margin-top: 10px; font-size: 12px; color: var(--text-sub); }
+.cols-2 { display: grid; gap: 20px; }
+
+/* 表紙 */
+.cover { display: flex; flex-direction: column; justify-content: center; min-height: 420px; padding: 40px 24px; color: #fff; background: linear-gradient(135deg, var(--main) 0%, var(--main-dark) 100%); }
+.cover::after { content: ""; position: absolute; right: 24px; bottom: 24px; width: 120px; height: 120px; border: 18px solid rgba(227, 166, 60, 0.35); border-radius: 50%; }
+.cover-to { font-size: 15px; }
+.cover-title { margin-top: 16px; font-size: 28px; line-height: 1.45; }
+.cover-sub { margin-top: 14px; font-size: 14px; color: #cfe3e1; }
+.cover-meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; margin-top: 28px; font-size: 14px; }
+.cover-meta dt { color: #cfe3e1; }
+.cover-note { margin-top: 28px; font-size: 11px; color: #b6d0cd; }
+
+/* 背景 */
+.bullets { display: grid; gap: 6px; }
+.bullets li { position: relative; padding-left: 18px; font-size: 14px; }
+.bullets li::before { content: ""; position: absolute; top: 0.7em; left: 2px; width: 7px; height: 7px; background: var(--main); border-radius: 50%; }
+.voice-list { display: grid; gap: 8px; }
+.voice-list li { padding: 10px 14px; font-size: 14px; background: var(--accent-soft); border-radius: 8px; }
+.summary-box { margin-top: 20px; padding: 14px 18px; font-size: 14px; background: var(--main-soft); border-left: 5px solid var(--main); border-radius: 4px; }
+
+/* 図 */
+.diagram-scroll { overflow-x: auto; }
+.swimlane { display: block; width: 100%; min-width: 760px; height: auto; font-family: "BIZ UDPGothic", sans-serif; }
+.sl-lane { fill: #fff; stroke: var(--border); }
+.sl-lane-alt { fill: #f6f9f8; }
+.sl-label-bg { fill: var(--main); }
+.sl-label { font-size: 15px; font-weight: 700; fill: #fff; }
+.sl-box rect { fill: #fff; stroke: #9fb3b0; stroke-width: 1.5; }
+.sl-box.is-problem rect { fill: var(--problem-soft); stroke: var(--problem); stroke-width: 2; }
+.sl-box.is-changed rect { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2.5; }
+.sl-num-bg { fill: var(--main); }
+.sl-box.is-problem .sl-num-bg { fill: var(--problem); }
+.sl-box.is-changed .sl-num-bg { fill: #c78a1f; }
+.sl-num { font-size: 12px; font-weight: 700; fill: #fff; }
+.sl-text { font-size: 13px; fill: var(--text); }
+.sl-flag { font-size: 10px; font-weight: 700; fill: var(--problem); }
+.sl-box.is-changed .sl-flag { fill: #a26f12; }
+.sl-arrow { fill: none; stroke: #7d918e; stroke-width: 1.8; }
+.sl-arrowhead { fill: #7d918e; }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 10px; font-size: 12px; color: var(--text-sub); }
+.legend-box { display: inline-block; width: 18px; height: 12px; border-radius: 3px; }
+.legend-box.is-problem { background: var(--problem-soft); border: 2px solid var(--problem); }
+.legend-box.is-changed { background: var(--accent-soft); border: 2px solid var(--accent); }
+.legend-gone { padding: 0 8px; text-decoration: line-through; text-decoration-color: var(--problem); background: #f2f2f2; border-radius: 3px; }
+
+/* 表 */
+.table-scroll { overflow-x: auto; }
+.issue-table, .func-table, .cost-table, .estimate-table { width: 100%; font-size: 13px; border-collapse: collapse; }
+.issue-table { min-width: 640px; }
+.func-table { min-width: 620px; }
+.issue-table th, .issue-table td, .func-table th, .func-table td, .cost-table th, .cost-table td, .estimate-table th, .estimate-table td { padding: 10px 12px; text-align: left; vertical-align: top; border: 1px solid var(--border); }
+.issue-table thead th, .func-table thead th, .cost-table thead th, .estimate-table thead th { color: #fff; background: var(--main); }
+.issue-table tbody th { width: 24%; color: var(--problem); background: var(--problem-soft); }
+.func-table tbody th, .cost-table tbody th, .estimate-table tbody th { background: #f6f9f8; }
+.func-table td:last-child { text-align: center; white-space: nowrap; }
+.cost-table td:last-child { font-weight: 700; text-align: right; white-space: nowrap; }
+.cost-total th, .cost-total td { font-size: 15px; background: var(--accent-soft) !important; }
+
+/* 範囲 */
+.scope { padding: 16px 18px; border-radius: 10px; }
+.scope-in { background: var(--main-soft); }
+.scope-out { background: #f4f4f2; }
+.scope-list { display: grid; gap: 8px; font-size: 14px; }
+.scope-list li { display: flex; align-items: flex-start; gap: 8px; }
+.prio { display: inline-block; flex: none; min-width: 56px; padding: 0 6px; font-size: 11px; font-weight: 700; line-height: 1.9; text-align: center; border-radius: 3px; }
+.prio-must { color: #fff; background: var(--problem); }
+.prio-should { color: #fff; background: var(--main); }
+.prio-could { color: var(--text); background: #dfe5e4; }
+.term { margin-top: 14px; padding-top: 10px; font-size: 12px; color: var(--text-sub); border-top: 1px dashed #cfcfcb; }
+
+/* 画面イメージ */
+.screen { display: grid; gap: 20px; }
+.screen-shot { display: block; overflow: hidden; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 20px rgba(20, 50, 48, 0.12); }
+.screen .bullets { margin-bottom: 14px; }
+.link-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; font-weight: 700; color: #fff; text-decoration: none; background: var(--main); border-radius: 6px; }
+.link-btn:hover { background: var(--main-dark); }
+
+/* ガントチャート */
+.gantt { min-width: 680px; font-size: 13px; }
+.gantt-row { display: grid; grid-template-columns: 200px 1fr; align-items: center; border-bottom: 1px solid var(--border); }
+.gantt-head { display: grid; grid-template-columns: 200px repeat(9, 1fr); font-size: 12px; font-weight: 700; color: #fff; background: var(--main); border: 0; }
+.gantt-head > div { padding: 6px 4px; text-align: center; }
+.gantt-head .gantt-name { text-align: left; padding-left: 10px; }
+.gantt-name { padding: 8px 10px; }
+.gantt-name strong { display: block; }
+.gantt-name small { display: block; font-size: 11px; line-height: 1.5; color: var(--text-sub); }
+.gantt-track {
+  position: relative;
+  height: 100%;
+  min-height: 52px;
+  background-image: linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: calc(100% / var(--weeks)) 100%;
+}
+.gantt-bar {
+  position: absolute;
+  top: 50%;
+  left: calc((var(--s) - 1) * 100% / var(--weeks) + 4px);
+  width: calc((var(--e) - var(--s) + 1) * 100% / var(--weeks) - 8px);
+  height: 18px;
+  margin-top: -9px;
+  background: var(--main);
+  border-radius: 9px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.gantt-bar.is-light { background: repeating-linear-gradient(45deg, #8fb5b1 0 6px, #b8d2cf 6px 12px); }
+.gantt-marks { border-bottom: 0; }
+.gantt-marks .gantt-track { min-height: 34px; background: none; }
+.gantt-mark { position: absolute; top: 6px; left: calc((var(--w) - 1) * 100% / var(--weeks) + 4px); font-size: 11px; font-weight: 700; white-space: nowrap; color: #a26f12; }
+
+/* 効果 */
+.effects { display: grid; gap: 12px; }
+.effect { padding: 16px 18px; background: var(--main-soft); border-radius: 10px; }
+.effect h3 { margin-bottom: 4px; font-size: 16px; color: var(--main-dark); }
+.effect p { font-size: 14px; }
+.estimate { margin-top: 20px; }
+.estimate-title { margin-bottom: 8px; font-weight: 700; }
+.tag { display: inline-block; margin-left: 8px; padding: 0 8px; font-size: 11px; color: var(--problem); background: var(--problem-soft); border-radius: 3px; }
+
+
+/* 次のステップ */
+.next-step { margin-top: 20px; }
+.next-list { display: grid; gap: 6px; counter-reset: n; }
+.next-list li { position: relative; padding-left: 32px; font-size: 14px; counter-increment: n; }
+.next-list li::before { content: counter(n); position: absolute; top: 2px; left: 0; display: grid; place-items: center; width: 22px; height: 22px; font-size: 12px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 50%; }
+
+/* =========================================================
+   タブレット・PC
+   ========================================================= */
+@media (min-width: 768px) {
+  .slide { padding: 36px 40px 40px; }
+  .slide-head h2 { font-size: 26px; }
+  .cols-2 { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .cover { min-height: 520px; padding: 56px 64px; }
+  .cover-title { font-size: 40px; }
+  .screen { grid-template-columns: 1.3fr 1fr; align-items: start; }
+  .effects { grid-template-columns: 1fr 1fr; }
+  .estimate-table td { white-space: nowrap; }
+  .toc ol { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  .layout { display: grid; grid-template-columns: 220px 1fr; gap: 24px; align-items: start; padding-top: 24px; }
+  .toc { position: sticky; top: 76px; margin: 0; }
+  .toc ol { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   印刷：A4横向き。1つのスライドを1ページに収め、図の途中で改ページしない
+   ========================================================= */
+@page { size: A4 landscape; margin: 10mm 12mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { font-size: 10.5pt; background: #fff; }
+  .no-print, .sample-notice { display: none !important; }
+  .layout { display: block; max-width: none; padding: 0; }
+  .deck { display: block; }
+  .slide {
+    min-height: 0;
+    padding: 0 0 8mm;
+    border-radius: 0;
+    box-shadow: none;
+    break-after: page;
+    break-inside: avoid;
+  }
+  .slide:last-child { break-after: auto; }
+  .slide::before { content: "※制作実績用のサンプル（架空の企業・数値）"; position: absolute; right: 0; bottom: 0; font-size: 7pt; color: #888; }
+  .slide-head { margin-bottom: 4mm; }
+  .cover { min-height: 180mm; padding: 20mm 24mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cover::before { color: #cfe3e1; }
+  .diagram, .table-scroll, .screen, .effects, .estimate, figure, table, .gantt { break-inside: avoid; }
+  .diagram-scroll, .table-scroll { overflow: visible; }
+  .swimlane { min-width: 0; max-height: 120mm; }
+  .gantt, .issue-table, .func-table { min-width: 0; }
+  .issue-table th, .issue-table td, .func-table th, .func-table td { padding: 1.6mm 2.4mm; }
+  .screen { grid-template-columns: 1.3fr 1fr; }
+  .screen-shot { box-shadow: none; }
+  .cols-2 { grid-template-columns: 1fr 1fr; }
+  .effects { grid-template-columns: 1fr 1fr; }
+  .estimate-table td { white-space: nowrap; }
+  .summary-box, .voice-list li, .scope, .effect, .issue-table thead th, .func-table thead th, .cost-table thead th, .estimate-table thead th, .issue-table tbody th, .prio, .gantt-head, .sl-label-bg, .cost-total th, .cost-total td {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+}
